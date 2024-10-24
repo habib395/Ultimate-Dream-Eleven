@@ -1,5 +1,4 @@
-
-import './App.css'
+import './index.css'
 
 function App() {
 
@@ -7,6 +6,7 @@ function App() {
     <>
       
       <h3>Vite + React</h3>
+      <button className="btn btn-warning"> Button is coming</button>
      
       
     </>
