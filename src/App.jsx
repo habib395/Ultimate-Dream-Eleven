@@ -5,10 +5,26 @@ import './index.css'
 import Cards from './components/Cards'
 import Subscribe from './components/Subscribe'
 import Footer from './components/Footer'
+import { useState } from 'react'
+import Selected from './components/Selected'
 
 function App() {
 
-  
+  const [selectPlayers, setSelectedPlayers] = useState([])
+
+  const addPlayerSelected = selected =>{
+
+    const isExist = selectPlayers.find(
+      previousSelected => previousSelected.playerId === selected.playerId
+    )
+    if(!isExist){
+      setSelectedPlayers([...selectPlayers, selected])
+    }else{
+      alert('Already Existed.')
+    }
+   
+  }
+  console.log(selectPlayers)
 
   return (
     <div>
@@ -16,11 +32,13 @@ function App() {
       {/* header section */}
      <Header></Header>
       {/* banner section */}
-      <Banner></Banner>
+      {/* <Banner addStaticValue={addStaticValue}></Banner> */}
       {/* available section */}
       <Available></Available>
       {/* dynamic section */}
-      <Cards></Cards>
+      <Cards addPlayerSelected={addPlayerSelected}></Cards>
+      {/* selected players */}
+      <Selected selectPlayers={selectPlayers}></Selected>
       {/* subscribe section */}
       <Subscribe></Subscribe>
       {/* Footer section */}
