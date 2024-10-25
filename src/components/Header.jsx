@@ -2,8 +2,7 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <div className='container mx-auto'>
-        <div className='flex items-center justify-between py-10'>
+        <div className='container mx-auto flex flex-col md:flex-row items-center md:justify-between py-10'>
             <div><img style={{width: '50px'}} src="./../../assets/logo.png" alt="" /></div>
             <div className='flex gap-10'>
                 <p>Home</p>
@@ -15,6 +14,5 @@ export default function Header() {
                 </button>
             </div>
         </div>
-    </div>
   )
 }
