@@ -4,11 +4,22 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../App.css'
 
 export default function Banner({addStaticValue}) {
+
   const addTodoToast = () =>{
-    toast('Credit added To your Account')
+    toast('Credit added To your Account',{
+      // position: "bottom-right",
+      autoClose: 2000, 
+      // hideProgressBar: true,
+      closeOnClick: true, 
+      // pauseOnHover: true, 
+      draggable: true, 
+      // progress: undefined, 
+      className: 'custom-toast', 
+    })
   }
+
   return (
-    <div className='container mx-auto bg-cover bg-black bg-no-repeat rounded-xl opacity-90' style={{
+    <div className='md:container mx-auto bg-cover bg-black bg-no-repeat rounded-xl opacity-90' style={{
       backgroundImage : 'url(/bg-shadow.png)',}}>
         <div className='w-9/12 mx-auto flex flex-col justify-center items-center py-10 text-white'>
         <img style={{width :"200px"}} src="/banner-main.png" alt="" />

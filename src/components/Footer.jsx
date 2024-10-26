@@ -23,8 +23,8 @@ export default function Footer() {
             <div>
                 <h2>Subscribe</h2>
                 <p className='text-white text-opacity-60 text-sm'>Subscribe to our newsletter for the latest updates.</p>
-                <p>
-                <div className="join">
+                <div>
+                <div className="md:join flex flex-col md:flex-row">
                 <div>
                 <div>
                 <input className="input input-bordered  join-item" placeholder="Enter your Email" />
@@ -32,7 +32,7 @@ export default function Footer() {
                </div>
             <button className="btn bg-gradient-to-r from-[#FFFF00] to-[#ef855f] join-item">Search</button>
                </div>
-              </p>
+              </div>
             </div>
         </div>
         <hr />

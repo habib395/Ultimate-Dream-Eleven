@@ -12,11 +12,11 @@ function App() {
   const addTodoToast = () =>{
     toast('Credit added To your Account',{
       // position: "bottom-right",
-      // autoClose: 2000, 
+      autoClose: 2000, 
       // hideProgressBar: true,
-      // closeOnClick: true, 
+      closeOnClick: true, 
       // pauseOnHover: true, 
-      // draggable: true, 
+      draggable: true, 
       // progress: undefined, 
       className: 'custom-toast',
     })
@@ -53,7 +53,6 @@ const handleReducePrice = price =>{
     const isExist = selectPlayers.find(
       previousSelected => previousSelected.playerId === selected.playerId
     )
-    console.log(selectPlayers.length)
     if(selectPlayers.length < 6){
       if(!isExist && balance > selected.biddingPrice){
         handleReducePrice(selected.biddingPrice)
@@ -81,9 +80,9 @@ const handleReducePrice = price =>{
             <div><img style={{width: '50px'}} src="/logo.png" alt="" /></div>
             <div className='flex gap-10'>
                 <p>Home</p>
-                <p>Fixture</p>
-                <p>Teams</p>
-                <p>Schedules</p>
+                <p className='hidden md:block'>Fixture</p>
+                <p className='hidden md:block'>Teams</p>
+                <p className='hidden md:block'>Schedules</p>
                 <button className='flex items-center border  px-3 rounded-lg bg-transparent gap-1'><span>{balance}</span> Coin
                 <img style={{width: '15px'}} src="/coin.png" alt="" />
                 </button>
