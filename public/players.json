@@ -88,5 +88,15 @@
     "battingType": "Right-hand bat",
     "bowlingType": "Right-arm off-break",
     "biddingPrice": "2000000"
+  },
+  {
+    "playerId": 10,
+    "name": "Sakib AL Hasan",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co.com/FBbMqy8/sakib.png",
+    "role": "All-rounder",
+    "battingType": "Left-hand bat",
+    "bowlingType": "Left-arm off-break",
+    "biddingPrice": "2300000"
   }
 ]

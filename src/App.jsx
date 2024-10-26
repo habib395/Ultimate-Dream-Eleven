@@ -9,18 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 
 function App() {
-  const addTodoToast = () =>{
-    toast('Credit added To your Account',{
-      // position: "bottom-right",
-      autoClose: 2000, 
-      // hideProgressBar: true,
-      closeOnClick: true, 
-      // pauseOnHover: true, 
-      draggable: true, 
-      // progress: undefined, 
-      className: 'custom-toast',
-    })
-  }
 const [balance, setBalance] = useState('0')  
 const handleReducePrice = price =>{
   setBalance(balance - price)

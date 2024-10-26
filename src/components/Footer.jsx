@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div className='bg-black absolute w-full mx-auto p-3 pt-40 z-10'>
+    <div className='bg-black absolute w-full mx-auto p-3 pt-48 z-10'>
        <div className='flex justify-center'>
        <img style={{width: "100px"}} src="/logo-footer.png" alt="" />
        </div>
@@ -24,7 +24,7 @@ export default function Footer() {
                 <h2>Subscribe</h2>
                 <p className='text-white text-opacity-60 text-sm'>Subscribe to our newsletter for the latest updates.</p>
                 <div>
-                <div className="md:join flex flex-col md:flex-row">
+                <div className="md:join flex flex-col md:flex-row py-4">
                 <div>
                 <div>
                 <input className="input input-bordered  join-item" placeholder="Enter your Email" />

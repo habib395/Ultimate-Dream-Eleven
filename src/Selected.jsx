@@ -23,6 +23,9 @@ export default function Selected({selectPlayers, playerRemoved, handleIsActiveSt
             <div>
             <p className="text-xl font-bold">{player.name}</p>
             <p>{player.battingType}</p>
+            <p>
+              {player.biddingPrice}
+            </p>
             </div>
            <button onClick={()=> playerRemoved(player.playerId)} className="btn bg-transparent">
            <i className="fa-solid fa-trash"></i>
