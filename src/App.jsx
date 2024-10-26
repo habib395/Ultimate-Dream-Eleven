@@ -10,11 +10,15 @@ import Banner from './components/Banner'
 function App() {
 
   const [balance, setBalance] = useState('0')
-  const addStaticValue = () =>{
-  const amountToAdd = 6000000
-  setBalance((prevBalance) => (parseFloat(prevBalance) + amountToAdd).toString())
-  }
+  
+const handleReducePrice = price =>{
+  setBalance(balance - price)
+}
 
+  const addStaticValue = () =>{
+    const amountToAdd = 6000000
+    setBalance((prevBalance) => (parseFloat(prevBalance) + amountToAdd))
+  }
   const [isActive, setIsActive] = useState({
     cart : true,
     status : "Available"
@@ -34,20 +38,28 @@ function App() {
       }     
   }
 
-
   const [selectPlayers, setSelectedPlayers] = useState([])
   const [preparePlayer, setPreparePlayer] = useState([])
+
   const addPlayerSelected = selected =>{
     const isExist = selectPlayers.find(
       previousSelected => previousSelected.playerId === selected.playerId
     )
     if(!isExist){
+      
+      handleReducePrice(selected.biddingPrice)
+      
       setSelectedPlayers([...selectPlayers, selected])
     }else{
-      alert('Already Existed.')
+      alert(`Already Existed.`)
     }
   }
+
+
   const playerRemoved = id => {
+
+    // addReduceFunction
+
     const removedPlayer = selectPlayers.find( player => player.playerId === id)
     const updatePlayer = selectPlayers.filter(player => player.playerId !== id)
     setSelectedPlayers(updatePlayer)
@@ -56,7 +68,8 @@ function App() {
   return ( 
     <div>
       
-      <div className='sticky top-0 flex flex-col md:flex-row items-center md:justify-between bg-gradient-to-b from-[#F9F7F3] to-[#F9F7F3]/50 py-10 z-50 px-10'>
+      {/* available balance */}
+      <div className='sticky top-0 flex flex-col md:flex-row items-center md:justify-between bg-gradient-to-b from-[#F9F7F3] to-[#F9F7F3]/50 py-6 z-50 px-10'>
             <div><img style={{width: '50px'}} src="/logo.png" alt="" /></div>
             <div className='flex gap-10'>
                 <p>Home</p>

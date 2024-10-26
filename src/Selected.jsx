@@ -1,17 +1,13 @@
 import React from 'react'
 
-export default function Selected({selectPlayers, playerRemoved}) {
+export default function Selected({selectPlayers, playerRemoved, handleIsActiveStatus, isActive}) {
   return (
     <div>
         
         <div className='container mx-auto'>
     <div>
-      <div className='flex justify-between py-10'>
+      <div className='flex justify-between py-4'>
         <h2 className='font-bold text-xl'>Selected Players({selectPlayers.length}/6)</h2>
-        <div className='join'>
-          <button className='btn bg-transparent join-item'>Available</button>
-          <button className='btn bg-[#E7FE29] join-item font-bold'>Selected({selectPlayers.length})</button>
-        </div>
       </div>
     </div>
         
@@ -43,9 +39,9 @@ export default function Selected({selectPlayers, playerRemoved}) {
 
       </div>
       
-        <button className='btn bg-[#E7FE29] px-4 font-bold my-6'>Add More Player</button>
-        
-        
+        <div className='flex font-bold text-xl  px-4 py-6  my-6'>           
+        <button onClick={()=>handleIsActiveStatus("Available")} className= {`${isActive.cart? " btn bg-[#E7FE29]": " btn bg-[#E7FE29]"}`}>Add More Player</button>
+        </div>
 
     </div>
 

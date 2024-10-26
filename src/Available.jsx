@@ -5,17 +5,7 @@ export default function Available({isActive, players, addPlayerSelected, handleI
     <div>
         
         <div className='container mx-auto'>
-    <div>
-      <div className='flex justify-between py-10'>
-        <h2 className='font-bold text-xl'>Available Players</h2>
-        <div className='join'>
-          <button onClick={()=>handleIsActiveStatus("Available")} className= {`${isActive.cart? " btn active join-item ": " btn join-item"}`}>Available</button>
-          <button onClick={()=>handleIsActiveStatus("Selected")}  className= {`${isActive.cart? " btn join-item ": " btn active join-item"}`}>Selected({selectPlayers.length})</button>
-        </div>
-      </div>
-    </div>
-    {/* {isActive.cart?<Available></Available>:<Selected></Selected>} */}
-
+    <h2 className='font-bold text-2xl py-4'>Available Players</h2>
     <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
         {players.map(player =>(
             <div key={player.playerId} className="card bg-base-100 border">

@@ -7,7 +7,7 @@
     "role": "Batsman",
     "battingType": "Right-hand bat",
     "bowlingType": "Right-arm medium",
-    "biddingPrice": "1600000"
+    "biddingPrice": "1000000"
   },
   {
     "playerId": 2,
@@ -17,7 +17,7 @@
     "role": "Batsman",
     "battingType": "Right-hand bat",
     "bowlingType": "Right-arm off-break",
-    "biddingPrice": "1600000"
+    "biddingPrice": "1800000"
   },
   {
     "playerId": 3,
@@ -27,7 +27,7 @@
     "role": "Bowler",
     "battingType": "Right-hand bat",
     "bowlingType": "Right-arm fast",
-    "biddingPrice": "1600000"
+    "biddingPrice": "1100000"
   },
   {
     "playerId": 4,
@@ -37,7 +37,7 @@
     "role": "Batsman",
     "battingType": "Left-hand bat",
     "bowlingType": "Right-arm leg-break",
-    "biddingPrice": "1600000"
+    "biddingPrice": "1700000"
   },
   {
     "playerId": 5,
@@ -47,7 +47,7 @@
     "role": "All-rounder",
     "battingType": "Left-hand bat",
     "bowlingType": "Right-arm fast-medium",
-    "biddingPrice": "1600000"
+    "biddingPrice": "1800000"
   },
   {
     "playerId": 6,
@@ -57,6 +57,36 @@
     "role": "Batsman",
     "battingType": "Right-hand bat",
     "bowlingType": "Right-arm off-break",
-    "biddingPrice": "1600000"
+    "biddingPrice": "1800000"
+  },
+  {
+    "playerId": 7,
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co.com/ZHNyGSR/trent.png",
+    "role": "Bowler",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Left-arm fast",
+    "biddingPrice": "1200000"
+  },
+  {
+    "playerId": 8,
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "image": "https://i.ibb.co.com/87njHzk/rasid.png",
+    "role": "Bowler",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm leg-break",
+    "biddingPrice": "1000000"
+  },
+  {
+    "playerId": 9,
+    "name": "Glenn Maxwell",
+    "country": "Australia",
+    "image": "https://i.ibb.co.com/4dQJxdJ/max.png",
+    "role": "All-rounder",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm off-break",
+    "biddingPrice": "2000000"
   }
 ]
