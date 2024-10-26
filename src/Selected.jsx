@@ -2,16 +2,13 @@ import React from 'react'
 
 export default function Selected({selectPlayers, playerRemoved, handleIsActiveStatus, isActive}) {
   return (
-    <div>
-        
+    <div>  
         <div className='container mx-auto'>
     <div>
       <div className='flex justify-between py-4'>
         <h2 className='font-bold text-xl'>Selected Players({selectPlayers.length}/6)</h2>
       </div>
     </div>
-        
-
       <div className="container mx-auto grid grid-cols-1 gap-4">
         {
           selectPlayers.map(player => (
@@ -42,9 +39,7 @@ export default function Selected({selectPlayers, playerRemoved, handleIsActiveSt
         <div className='flex font-bold text-xl  px-4 py-6  my-6'>           
         <button onClick={()=>handleIsActiveStatus("Available")} className= {`${isActive.cart? " btn bg-[#E7FE29]": " btn bg-[#E7FE29]"}`}>Add More Player</button>
         </div>
-
     </div>
-
     </div>
   )
 }

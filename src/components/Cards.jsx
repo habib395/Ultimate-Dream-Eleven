@@ -13,7 +13,6 @@ export default function Cards({isActive, handleIsActiveStatus, addPlayerSelected
     }, [])
   return (
     <div>
-
     <div className='container mx-auto'>
     <div>
       <div className='flex justify-end py-6'>

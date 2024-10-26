@@ -1,20 +1,30 @@
-
 import './index.css'
 import Cards from './components/Cards'
 import Subscribe from './components/Subscribe'
 import Footer from './components/Footer'
 import { useState } from 'react'
 import Banner from './components/Banner'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css'
 
 function App() {
-
-  const [balance, setBalance] = useState('0')
-  
+  const addTodoToast = () =>{
+    toast('Credit added To your Account',{
+      // position: "bottom-right",
+      // autoClose: 2000, 
+      // hideProgressBar: true,
+      // closeOnClick: true, 
+      // pauseOnHover: true, 
+      // draggable: true, 
+      // progress: undefined, 
+      className: 'custom-toast',
+    })
+  }
+const [balance, setBalance] = useState('0')  
 const handleReducePrice = price =>{
   setBalance(balance - price)
 }
-
   const addStaticValue = () =>{
     const amountToAdd = 6000000
     setBalance((prevBalance) => (parseFloat(prevBalance) + amountToAdd))
@@ -37,37 +47,35 @@ const handleReducePrice = price =>{
         })
       }     
   }
-
   const [selectPlayers, setSelectedPlayers] = useState([])
   const [preparePlayer, setPreparePlayer] = useState([])
-
   const addPlayerSelected = selected =>{
     const isExist = selectPlayers.find(
       previousSelected => previousSelected.playerId === selected.playerId
     )
-    if(!isExist){
-      
-      handleReducePrice(selected.biddingPrice)
-      
-      setSelectedPlayers([...selectPlayers, selected])
+    console.log(selectPlayers.length)
+    if(selectPlayers.length < 6){
+      if(!isExist && balance > selected.biddingPrice){
+        handleReducePrice(selected.biddingPrice)
+        setSelectedPlayers([...selectPlayers, selected])
+        toast('Congrats! This Player in now your squad')
+      }
+      else if(!isExist && balance < selected.biddingPrice){
+        toast("Not enough Money to buy this")
+      }else{
+        toast("Player Already Selected.")
+      }
     }else{
-      alert(`Already Existed.`)
+      toast('You cannot add more than 6 players.')
     }
   }
-
-
   const playerRemoved = id => {
-
-    // addReduceFunction
-
     const removedPlayer = selectPlayers.find( player => player.playerId === id)
     const updatePlayer = selectPlayers.filter(player => player.playerId !== id)
     setSelectedPlayers(updatePlayer)
   }
-
   return ( 
     <div>
-      
       {/* available balance */}
       <div className='sticky top-0 flex flex-col md:flex-row items-center md:justify-between bg-gradient-to-b from-[#F9F7F3] to-[#F9F7F3]/50 py-6 z-50 px-10'>
             <div><img style={{width: '50px'}} src="/logo.png" alt="" /></div>
@@ -81,7 +89,6 @@ const handleReducePrice = price =>{
                 </button>
             </div>
            </div>
-
       {/* header section */}
      {/* Banner Section */}
      <Banner addStaticValue={addStaticValue}></Banner>
@@ -91,8 +98,8 @@ const handleReducePrice = price =>{
       <Subscribe></Subscribe>
       {/* Footer section */}
       <Footer></Footer>
+      <ToastContainer />
     </div>
   )
 }
-
 export default App

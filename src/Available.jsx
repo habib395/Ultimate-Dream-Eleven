@@ -1,9 +1,8 @@
 import React from 'react'
 
-export default function Available({isActive, players, addPlayerSelected, handleIsActiveStatus, selectPlayers}) {
+export default function Available({ players, addPlayerSelected}) {
   return (
     <div>
-        
         <div className='container mx-auto'>
     <h2 className='font-bold text-2xl py-4'>Available Players</h2>
     <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -43,7 +42,6 @@ export default function Available({isActive, players, addPlayerSelected, handleI
         ))}
     </div>
     </div>
-
     </div>
   )
 }
