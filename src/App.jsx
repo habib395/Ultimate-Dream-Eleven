@@ -22,6 +22,7 @@ const handleReducePrice = price =>{
     status : "Available"
   }
   )
+  // no-1
   const handleIsActiveStatus = (status) =>{
     if(status == "Available"){
       setIsActive({
@@ -36,7 +37,8 @@ const handleReducePrice = price =>{
       }     
   }
   const [selectPlayers, setSelectedPlayers] = useState([])
-  const [preparePlayer, setPreparePlayer] = useState([])
+  // console.log(setSelectedPlayers)
+  // const [preparePlayer, setPreparePlayer] = useState([])
   const addPlayerSelected = selected =>{
     const isExist = selectPlayers.find(
       previousSelected => previousSelected.playerId === selected.playerId
@@ -80,6 +82,7 @@ const handleReducePrice = price =>{
      {/* Banner Section */}
      <Banner addStaticValue={addStaticValue}></Banner>
       {/* dynamic section */}
+{/* no-2 */}
       <Cards isActive={isActive} handleIsActiveStatus={handleIsActiveStatus} addPlayerSelected={addPlayerSelected} selectPlayers={selectPlayers} playerRemoved={playerRemoved}></Cards>
       {/* subscribe section */}
       <Subscribe></Subscribe>

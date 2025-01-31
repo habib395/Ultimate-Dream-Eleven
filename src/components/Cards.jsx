@@ -5,6 +5,7 @@ import Selected from '../Selected';
 
 export default function Cards({isActive, handleIsActiveStatus, addPlayerSelected,  selectPlayers, playerRemoved}) {
     const [players, setPlayers] = useState([])
+    // console.log(players)
     useEffect(()=>{
         fetch('/players.json')
         .then(res => res.json())
@@ -17,6 +18,7 @@ export default function Cards({isActive, handleIsActiveStatus, addPlayerSelected
     <div>
       <div className='flex justify-end py-6'>
         <div className='join'>
+{/* no-3 */}
           <button onClick={()=>handleIsActiveStatus("Available")} className= {`${isActive.cart? " btn active join-item ": " btn join-item"}<Available`}>Available</button>
           <button onClick={()=>handleIsActiveStatus("Selected")}  className= {`${isActive.cart? " btn join-item ": " btn active join-item"}`}>Selected({selectPlayers.length})</button>
         </div>

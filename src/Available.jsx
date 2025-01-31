@@ -13,7 +13,7 @@ export default function Available({ players, addPlayerSelected}) {
           src={player.image}
             alt="Shoes" />
         </figure>
-        <div className="card-body">
+        <div className="card-body"> 
           <h2 className="card-title">
          <div>
          <i className="fa-solid fa-user"></i>
